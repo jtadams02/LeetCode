@@ -1,3 +1,5 @@
-# LeetCode
+# LeetCode and HackerRank
 
-This will house all my solutions for leetcode
+This repository will serve as solutions to all the LeetCode or HackerRank questions I encounter
+[HackerRank](https://www.hackerrank.com/jtcool0920)
+[LeetCode](https://leetcode.com/jtman5/)
