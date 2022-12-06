@@ -1,6 +1,8 @@
-# LeetCode and HackerRank
+# Coding Solutions
 
-This repository will serve as solutions to all the LeetCode or HackerRank questions I encounter 
+This repository will serve as solutions to all the LeetCode/HackerRank like questions I encounter  
+
+Now adding AdventOfCode Solutions
 
 [HackerRank](https://www.hackerrank.com/jtcool0920)  
 
