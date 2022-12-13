@@ -14,6 +14,7 @@ int conversion(char x, vector<char> alpha);
 int getIndex(vector<char> v, char K);
 char findDoubleChar(string one, string two);
 char findTripleChar(string one, string two, string three);
+bool findThirdChar(char m, string one);
 
 int main(int argc, char* argv[])
 {
@@ -33,12 +34,10 @@ int main(int argc, char* argv[])
     for(int i=0;i<26;i++)
     {
         alpha.push_back((char)(init+i));
-       // cout << (char)(init+i) << ", at index: " << getIndex(alpha,((char)(init+i))) << endl;
     }
     for(int i=0;i<26;i++)
     {
         alpha.push_back((char)(initU+i));
-       // cout << (char)(initU+i) << ", at index: " << getIndex(alpha,((char)(initU+i))) << endl;
     }
     
     // Counter variable
@@ -49,9 +48,61 @@ int main(int argc, char* argv[])
     vector<string> tres;
     while(getline(myFile,input))
     {
-        
+        string why = input;
+        tres.push_back(why);
+        cout << tres[count] << endl;
+        count++;
     }
 
+    /*
+    string one = tres[0];
+    string two = tres[1];
+    string three = tres[2];
+
+    cout << "1:" << one <<"\n2:" << two << "\n3:" << three << endl;
+
+    cout << "\nLets find the matching character in all three!" << endl;
+
+    for(char x : one)
+    {
+        for(char y : two)
+        {
+            if(x==y){
+                if(isspace(y)){break;}
+                cout << y << " is in both one and two, lets see if it is in three" << endl;
+                for(char z : three)
+                {
+                    if(z==y)
+                    {
+                        cout << "The matching string for all 3 is: " << z << endl;
+                    }
+                }
+            }
+        }
+    } */
+
+
+    for(int i=0;i<tres.size();i+=3)
+    {   
+        char m1 = findTripleChar(tres[i],tres[i+1],tres[i+2]);
+
+        if(m1!='-')
+        {
+            counter += conversion(m1,alpha);
+            cout << tres[i] << endl;
+            cout << tres[i+1] << endl;
+            cout << tres[i+2] << endl;
+            cout << "\nThe Matching char is: " << m1 << endl;
+            cout << endl;
+
+        } else {cout << "No match for these 3" << endl;}
+
+    }
+
+    cout << counter << endl;
+    cout << count << endl;
+
+}
 // Used for testing, copied from https://www.geeksforgeeks.org/how-to-find-index-of-a-given-element-in-a-vector-in-cpp/
 // NVM we need this lol
 int getIndex(vector<char> v, char K)
@@ -123,16 +174,36 @@ char findDoubleChar(string one, string two)
 char findTripleChar(string one, string two, string three) 
 {
     char matchingChar='-';
-    for(int x=0;x<one.size();x++)
-    {   
-        char tempChar = one[x];
-        for(int k=0;k<two.size();k++)
-        {
-            if(tempChar==two[k]&&tempChar==three[k]){
-                matchingChar = tempChar;
+    for(char x : one)
+    {
+        if(isspace(x)){continue;}
+        for(char y : two)
+        {   
+            if(x==y)
+            {
+                for(char z : three)
+                {
+                    if(y==z)
+                    {
+                        matchingChar = z;
+
+                    }
+                }
             }
         }
     }
-
+    
     return matchingChar;
+}
+
+bool findThirdChar(char m, string one)
+{
+    for(char x : one)
+    {
+        if(x==m)
+        {
+            return true;
+        }
+    }
+    return false;
 }
