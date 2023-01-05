@@ -49,4 +49,8 @@ Thumbs.db
 *.mov
 *.wmv
 
-/.vscode/
+/.vscode/*
+.vscode/settings.json
+.vscode/tasks.json
+*.json
+.vscode/settings.json
