@@ -3,9 +3,8 @@
 
 
 using namespace std;
-
-// This is used for testing my code
+int removeDuplicates(std::vector<int>&nums);
+// This is used for testing my code 
 int main(){
-
-
+    
 } 
