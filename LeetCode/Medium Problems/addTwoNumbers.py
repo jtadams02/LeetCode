@@ -1,53 +1,4 @@
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        LeetCode Logo
-Problem List
-Premium
-1
 
-avatar
-Accepted
-Next question
-242. Valid Anagram
-More challenges
-43. Multiply Strings
-67. Add Binary
-371. Sum of Two Integers
-All statuses
-All languages
-Accepted
-in a few seconds
-Python3
-Accepted
-an hour ago
-Python3
-
-
-Jacob Adams
-Jacob Adams
-May 31, 2023 10:23
-Details
-Solution
-Python3
-Runtime
-81 ms
-Beats
-34.39%
-Memory
-16.4 MB
-Beats
-35.76%
-Click the distribution chart to view more details
-Notes
-Write your notes here
-Related Tags
-Select tags
-0/5
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -108,23 +59,6 @@ class Solution:
         # Wait what if the carry is still around after, like in case 3??
         # Solved: Make the loop run again if the carry is non-null
         return finalNode.next
-
-
-
-
-                
-
-
-
-
-
-        
-
-            
-Console
-
-LeetCode - The World's Leading Online Programming Learning Platform
-
 
 
 
